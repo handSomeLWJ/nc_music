@@ -33,10 +33,13 @@ Page({
         title: '手机号格式不正确，请输入正确的手机号',
         icon:'none'
       })
-      const {profile} = await reqLogin({phone,password})
+      const {profile} = await reqLogin({phone,password,isLogin:true})
       wx.setStorageSync('userInfo', profile)
-      wx.switchTab({
-        url: '../personal/personal',
+      // wx.switchTab({
+      //   url: '../personal/personal',
+      // })
+      wx.navigateBack({
+        delta: 1,
       })
     },
 

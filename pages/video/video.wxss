@@ -22,6 +22,7 @@
     border: 2rpx solid #aaa;
     width: 80%;
     height: 41rpx;
+    border-radius: 6rpx;
 }
 
 .navSearch .rightImg {
@@ -33,7 +34,7 @@
 /* 滚动导航栏 */
 
 .navScroll {
-    height: 56px;
+    height: 46px;
     display: flex;
     align-items: center;
 }
@@ -44,8 +45,93 @@
 }
 
 .navScroll .ScrollItem text {
-    padding: 4rpx 0;
+    padding: 2rpx 0;
 }
+
 .activeText {
     border-bottom: 4rpx solid #C20C0C;
+}
+
+
+/* 视频 */
+
+.videoScroll {
+    height: calc(100vh - 110rpx);
+}
+
+.videoScroll .ScrollItem {
+    margin-bottom: 50rpx;
+}
+
+.videoScroll .ScrollItem .poster {
+    width: 100%;
+    border-radius: 10rpx;
+}
+
+.videoScroll .ScrollItem .title {
+    margin: 5rpx 0 10rpx 0;
+    font-size: 30rpx;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.videoScroll .ScrollItem .msg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.videoScroll .ScrollItem .left {
+    display: flex;
+    align-items: center;
+}
+
+.videoScroll .ScrollItem .left .avatar {
+    width: 71rpx;
+    height: 71rpx;
+    border: 2rpx solid #999;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.videoScroll .ScrollItem .left .name {
+    font-size: 28rpx;
+    color: #666;
+}
+
+.videoScroll .ScrollItem .right {
+    display: flex;
+    align-items: center;
+}
+
+.videoScroll .ScrollItem .right .like {
+    position: relative;
+    font-size: 36rpx;
+}
+
+.videoScroll .ScrollItem .right .like .likeCount {
+    font-size: 24rpx;
+    position: absolute;
+    top: -15rpx;
+    left: 35rpx;
+}
+
+.videoScroll .ScrollItem .right .comment {
+    margin: 0 40rpx 0 70rpx;
+    position: relative;
+    font-size: 50rpx;
+}
+
+.videoScroll .ScrollItem .right .comment .commentCount {
+    font-size: 24rpx;
+    position: absolute;
+    top: -5rpx;
+    left: 30rpx;
+}
+
+.videoScroll .ScrollItem .right button {
+    width: 10rpx;
+    text-align: center;
+    background-color: #fff;
 }
