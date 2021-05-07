@@ -1,0 +1,22 @@
+.nav_header {
+    margin-top: 20rpx;
+}
+
+.nav_header .title {
+    font-size: 28rpx;
+    color: #666;
+}
+
+.nav_header .content {
+    font-size: 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_header .content .more {
+    border: 2rpx solid #333;
+    border-radius: 60rpx;
+    padding: 6rpx 15rpx;
+    font-size: 24rpx;
+    font-weight: 700;
+}
