@@ -1,2 +1,20 @@
-<!--pages/video/video.wxml-->
-<text>pages/video/video.wxml</text>
+<view class="video">
+    <!-- 搜索栏 -->
+    <view class="navSearch">
+        <image class="leftImg" mode="aspectFit" src="../../static/images/video/video.jpg"></image>
+        <input type="text" placeholder="谁伴我闯荡" placeholder-style="text-align: center;color:#C20C0C;"></input>
+        <image class="rightImg" mode="aspectFit" src="../../static/images/logo.png"></image>
+    </view>
+    <!-- 导航栏 -->
+    <scroll-view scroll-x class="navScroll" enable-flex>
+        <view class="ScrollItem" wx:for="{{videoNavList}}" wx:key="id" bindtap="clickNavItem" data-id="{{item.id}}">
+            <text class="{{item.id == currentNavId ? 'activeText' :'' }}">{{item.name}}</text>
+        </view>
+    </scroll-view>
+    <!-- 视频 -->
+    <scroll-view>
+        <view>
+            <video src=""></video>
+        </view>
+    </scroll-view>
+</view>

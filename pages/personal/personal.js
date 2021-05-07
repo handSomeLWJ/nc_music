@@ -5,7 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo:{},//用户信息
+  },
+  /* 获取头像和昵称 */
+  getUserInfo(){
+   let msg =  wx.getStorageSync('userInfo')
+   this.setData({userInfo:msg})
+  },
+  /* 点击跳转到登录页面 */
+  clickToLogin(){
+    if(this.data.userInfo.userId) return 
+    wx.navigateTo({
+      url: '/pages/login/login',
+    })
   },
 
   /**
@@ -26,7 +38,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getUserInfo()
   },
 
   /**

@@ -8,3 +8,10 @@ export const reqRecommend = (limit) => request('/personalized',{limit})
 
 /* 排行榜  /top/list  get idx:20中类型排行榜  */
 export const reqTop = (idx) => request('/top/list',{idx})
+
+/* 登录    /login/cellphone  get */
+export const reqLogin = ({phone,password}) => request('/login/cellphone',{phone,password})
+
+/* 获取视频导航栏标签列表 接口地址: /video/group/list get */
+export const reqVideoNavList = () => request('/video/group/list')
+

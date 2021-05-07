@@ -1,1 +1,51 @@
-/* pages/video/video.wxss */
+.video {
+    width: 96%;
+    margin: auto;
+}
+
+
+/* 搜索栏 */
+
+.navSearch {
+    height: 64rpx;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navSearch .leftImg {
+    width: 10%;
+    height: 41rpx;
+}
+
+.navSearch input {
+    border: 2rpx solid #aaa;
+    width: 80%;
+    height: 41rpx;
+}
+
+.navSearch .rightImg {
+    width: 10%;
+    height: 41rpx;
+}
+
+
+/* 滚动导航栏 */
+
+.navScroll {
+    height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+.navScroll .ScrollItem {
+    padding: 0 20rpx;
+    white-space: nowrap;
+}
+
+.navScroll .ScrollItem text {
+    padding: 4rpx 0;
+}
+.activeText {
+    border-bottom: 4rpx solid #C20C0C;
+}

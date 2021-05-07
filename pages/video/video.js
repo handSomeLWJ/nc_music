@@ -1,18 +1,29 @@
-// pages/video/video.js
+import {reqVideoNavList} from '../../network/api'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    videoNavList:[],//视频标签列表
+    currentNavId:'',//当前点中的导航栏id
   },
+  /* 请求导航栏数据 */
+async getVideoNavList(){
+  const {data} = await reqVideoNavList()
+  this.setData({videoNavList:data.slice(0,14),currentNavId:data[0].id})
+},
+/* 点击每一项导航栏 */
+clickNavItem(e){
+  this.setData({currentNavId:e.currentTarget.dataset.id})
+},
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getVideoNavList()
   },
 
   /**
